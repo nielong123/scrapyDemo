@@ -55,7 +55,7 @@ class DmozSplider(Spider):
                                 print 'child link _1 = ' + link
                                 link += '.html'
                                 log.msg("child item...", level=logging.INFO)
-                                # yield Request(link, callback=self.parse_child_1_content)
+                                yield Request(link, callback=self.parse_child_1_content)
                 log.msg("this level done.", level=logging.INFO)
             else:
                 print 'not find <br>'
